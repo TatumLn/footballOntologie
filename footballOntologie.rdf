@@ -15,6 +15,457 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date">
+        <rdfs:comment>Date j:m:a.</rdfs:comment>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time">
+        <rdfs:comment>Temps m:s:ms.</rdfs:comment>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#coaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#coaches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Coach"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:comment>Le coach entraîne une équipe.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasCoach -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasCoach">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Coach"/>
+        <rdfs:comment>Une équipe a un entraîneur.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:comment>Le match contient des événements</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasManager -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasManager">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager"/>
+        <rdfs:comment>Indique le manager (directeur sportif ou administratif) d&apos;une équipe.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasPlayer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasPlayer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:comment>Une équipe possède un ou plusieurs joueurs.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <rdfs:comment>Le joueur occupe un poste.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasReferee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasReferee">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee"/>
+        <rdfs:comment>Le match est arbitré par.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeam">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:comment>Le match implique des équipes.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeamCaptain -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeamCaptain">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:comment>Indique quel joueur est capitaine de l’équipe.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#occursInVenue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#occursInVenue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+        <rdfs:comment>Le match se déroule dans un lieu.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#officiates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#officiates">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:comment>L’arbitre dirige un match.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ownsVenue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ownsVenue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+        <rdfs:comment>Le club possède un stade ou lieu.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#partOfClub -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#partOfClub">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club"/>
+        <rdfs:comment>L’équipe appartient à un club.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#participatesIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>Une équipe participe à une compétition</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#performedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#performedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:comment>L’événement est causé par un joueur.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playsFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playsFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:comment>Le joueur appartient à une équipe.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playsIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#substitutedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#substitutedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:comment>Remplacement d’un joueur par un autre.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#GeneralDataProprety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#GeneralDataProprety">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#contractEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#contractEndDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playerDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date de fin du contrat.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#contractStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#contractStartDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playerDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date de début du contrat.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#createdOn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#createdOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#GeneralDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date de création de l’entité.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasFullName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playerDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Nom complet</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasJerseyNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasJerseyNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playerDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Numéro de maillot.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasScoreAway -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasScoreAway">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Score de l’équipe à l’extérieur.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasScoreHome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasScoreHome">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Score de l’équipe à domicile.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDataProprety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDataProprety">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date du match.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment>Heure de début.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#modifiedOn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#modifiedOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#GeneralDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>Date de mise à jour.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playerDataProprety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playerDataProprety">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment>Propriétés liées aux joueurs.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamAbbreviation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamAbbreviation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Abréviation du nom (ex. : PSG, FCB).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamDataProprety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamDataProprety">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#teamDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Nom officiel de l’équipe.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueCapacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Capacité maximale.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueDataProprety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueDataProprety">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment>Nom du lieu</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Ville ou adresse.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueDataProprety"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Nom du lieu.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -36,7 +487,34 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AttackingMidfielder">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
-        <rdfs:comment>Placé derrière les attaquants, il crée des occasions de but et relie le milieu à l’attaque.</rdfs:comment>
+        <rdfs:comment>Milieu offensif.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Ball -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Ball">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Equipment"/>
+        <rdfs:comment>Ballon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Boot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Boot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Equipment"/>
+        <rdfs:comment>Chaussure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CardEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CardEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:comment>Carton donné.</rdfs:comment>
     </owl:Class>
     
 
@@ -45,16 +523,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CenterBack">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
-        <rdfs:comment>Défenseur positionné au centre de la défense, juste devant le gardien. Il bloque les attaques par l’axe et marque souvent les attaquants adverses.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CenterForward -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CenterForward">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
-        <rdfs:comment>Similaire à l’avant-centre, mais joue parfois en pivot, dos au but, pour créer des espaces (Attaquant axial).</rdfs:comment>
+        <rdfs:comment>Défenseur central.</rdfs:comment>
     </owl:Class>
     
 
@@ -63,7 +532,24 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CentralMidfielder">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
-        <rdfs:comment>Joue au centre du terrain, il participe à la fois à la défense et à l’attaque. Il est souvent le moteur de l’équipe.</rdfs:comment>
+        <rdfs:comment>Milieu central.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club">
+        <rdfs:comment>Sans clubs, pas de championnat.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ClubTeam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ClubTeam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+        <rdfs:comment>Club.</rdfs:comment>
     </owl:Class>
     
 
@@ -72,6 +558,32 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Coach">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Competition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Competition">
+        <rdfs:comment>Le football moderne est structuré autour des compétitions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CompetitionMatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CompetitionMatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:comment>Match de compétition</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Cup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Cup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Competition"/>
+        <rdfs:comment>Coupe</rdfs:comment>
     </owl:Class>
     
 
@@ -89,16 +601,28 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#DefensiveMidfielder">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
-        <rdfs:comment>Positionné devant la défense, il récupère les ballons, intercepte les attaques et protège la ligne défensive.</rdfs:comment>
+        <rdfs:comment>Milieu défensif.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FalseNine -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Equipment -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FalseNine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
-        <rdfs:comment>Attaquant qui décroche au milieu pour désorganiser la défense adverse et créer des espaces pour ses coéquipiers (Faux neuf).</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Equipment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FirstDivisionClub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FirstDivisionClub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club"/>
+        <rdfs:comment>Club de 1ère division (Ligue 1, Premier League, etc.).</rdfs:comment>
     </owl:Class>
     
 
@@ -112,6 +636,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Foul -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Foul">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:comment>Faute.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FoulRule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FoulRule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Rule"/>
+        <rdfs:comment>Règle des fautes</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FourthOfficial -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FourthOfficial">
@@ -121,11 +663,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FriendlyMatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FriendlyMatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:comment>Match amical</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FullBack -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FullBack">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
-        <rdfs:comment>Défenseur positionné sur les côtés (gauche ou droit). Il défend contre les ailiers adverses et soutient parfois l’attaque.</rdfs:comment>
+        <rdfs:comment>Défenseur latéral.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Goal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
     </owl:Class>
     
 
@@ -148,6 +707,67 @@
     
 
 
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#HalfTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#HalfTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:comment>Mi-temps</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#IndoorArena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#IndoorArena">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Jersey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Jersey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Equipment"/>
+        <rdfs:comment>Maillot.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#JuniorClub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#JuniorClub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club"/>
+        <rdfs:comment>Club de formation ou jeunesse (U15, U17, U19).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#KickOff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#KickOff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:comment>Coup d’envoi.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#KnockoutMatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#KnockoutMatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:comment>Match à élimination directe</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#League -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#League">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Competition"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#MainReferee -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#MainReferee">
@@ -161,6 +781,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match">
+        <rdfs:comment>Pas de football sans matchs.</rdfs:comment>
     </owl:Class>
     
 
@@ -182,9 +810,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#OffsideEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#OffsideEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:comment>Hors-jeu.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#OffsideRule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#OffsideRule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Rule"/>
+        <rdfs:comment>Règle du hors-jeu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#PenaltyShootout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#PenaltyShootout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+        <rdfs:comment>Séance de tirs au but</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person">
+        <rdfs:comment>Sans personnes, pas de jeu.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -198,7 +855,9 @@
 
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position">
+        <rdfs:comment>Les positions structurent le jeu et les tactiques.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -211,11 +870,34 @@
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SecondStriker -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Rule -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SecondStriker">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
-        <rdfs:comment>Joue derrière l’avant-centre. Il fait le lien entre le milieu et l’attaque, et participe à la création et à la finition des actions (Deuxième attaquant).</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Rule"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ScoringRule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ScoringRule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Rule"/>
+        <rdfs:comment>Règle de marquage des buts</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SecondDivisionClub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SecondDivisionClub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club"/>
+        <rdfs:comment>Club de 2e division (Ligue 2, Championship, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Stadium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Stadium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
     </owl:Class>
     
 
@@ -232,23 +914,85 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Striker">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
-        <rdfs:comment>Principal buteur de l’équipe. Il joue près du but adverse et est souvent le point de finition des attaques (Buteur).</rdfs:comment>
+        <rdfs:comment>Buteur.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Sweeper -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Substitution -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Sweeper">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
-        <rdfs:comment>Défenseur libre jouant derrière la ligne de défense. Il intercepte les ballons dangereux et organise la défense. Rarement utilisé aujourd’hui.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Substitution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Event"/>
+        <rdfs:comment>Remplacement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SubstitutionRule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SubstitutionRule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Rule"/>
+        <rdfs:comment>Règle des remplacements</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team">
+        <rdfs:comment>Le football est un sport d’équipe, cette classe est indispensable.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#TemporaryVenue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#TemporaryVenue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#TimeRule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#TimeRule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Rule"/>
+        <rdfs:comment>Règle du temps de jeu</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Tournament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Tournament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Competition"/>
+        <rdfs:comment>Tournoi</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#TrainingGround -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#TrainingGround">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue">
+        <rdfs:comment>Lieu / Infrastructure où le match se déroule</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#VeteranClub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#VeteranClub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club"/>
+        <rdfs:comment>Club pour joueurs vétérans (35 ans et +).</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -261,20 +1005,20 @@
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#WingBack -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Winger -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#WingBack">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
-        <rdfs:comment>Variante offensive de l’arrière latéral. Il monte souvent pour participer à l’attaque et centrer le ballon.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Winger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
+        <rdfs:comment>Ailier.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Winger -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#WorldCup -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Winger">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
-        <rdfs:comment>Joue sur les ailes, utilise sa vitesse et son dribble pour déborder la défense et centrer.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#WorldCup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Competition"/>
+        <rdfs:comment>Coupe du Monde</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
