@@ -1193,37 +1193,53 @@
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#asRoma -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ASRoma -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#asRoma">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ASRoma">
         <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ClubTeam"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#paoloDybala -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#KevinDeBruyne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#paoloDybala">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#KevinDeBruyne">
         <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
-        <untitled-ontology-10:playsFor rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#asRoma"/>
-        <untitled-ontology-10:hasJerseyNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</untitled-ontology-10:hasJerseyNumber>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#realMadrid -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#PaoloDybala -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#realMadrid">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#PaoloDybala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <untitled-ontology-10:playsFor rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ASRoma"/>
+        <untitled-ontology-10:hasJerseyNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21</untitled-ontology-10:hasJerseyNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#RealMadrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#RealMadrid">
         <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ClubTeam"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#zenedineZidane -->
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#VirgilVanDijk -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#zenedineZidane">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#VirgilVanDijk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ZenedineZidane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ZenedineZidane">
         <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager"/>
-        <untitled-ontology-10:managesTeam rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#realMadrid"/>
+        <untitled-ontology-10:managesTeam rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#RealMadrid"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
