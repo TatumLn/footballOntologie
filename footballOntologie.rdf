@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-10="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10">
         <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"/>
     </owl:Ontology>
@@ -329,7 +330,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasJerseyNumber">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playerDataProprety"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Numéro de maillot.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -621,6 +622,9 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Goalkeeper"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
         <rdfs:comment>Défenseurs</rdfs:comment>
     </owl:Class>
     
@@ -660,6 +664,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Goalkeeper"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
         <rdfs:comment>Attaquants</rdfs:comment>
     </owl:Class>
     
@@ -731,6 +737,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Goalkeeper">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
         <rdfs:comment>Le seul joueur autorisé à utiliser les mains dans la surface de réparation. Son rôle principal est d’empêcher l’équipe adverse de marquer en protégeant les buts.</rdfs:comment>
     </owl:Class>
     
@@ -1172,6 +1179,52 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Competition"/>
         <rdfs:comment>Coupe du Monde</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#asRoma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#asRoma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ClubTeam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#paoloDybala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#paoloDybala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+        <untitled-ontology-10:playsFor rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#asRoma"/>
+        <untitled-ontology-10:hasJerseyNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</untitled-ontology-10:hasJerseyNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#realMadrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#realMadrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#ClubTeam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#zenedineZidane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#zenedineZidane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager"/>
+        <untitled-ontology-10:managesTeam rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#realMadrid"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
