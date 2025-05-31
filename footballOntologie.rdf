@@ -788,6 +788,26 @@
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasReferee"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AssistantReferee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeam"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#matchDate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Pas de football sans matchs.</rdfs:comment>
     </owl:Class>
     
@@ -848,7 +868,27 @@
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#playsFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasPosition"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasJerseyNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -940,6 +980,41 @@
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasPlayer"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeamCaptain"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasCoach"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Coach"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasManager"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasPlayer"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">23</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Le football est un sport d’équipe, cette classe est indispensable.</rdfs:comment>
     </owl:Class>
     
