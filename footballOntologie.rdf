@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10/"
+     xml:base="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10">
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AssistantReferee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AssistantReferee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee"/>
+        <rdfs:comment>Arbitres de touche, signalent les hors-jeux, sorties de balle, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AttackingMidfielder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AttackingMidfielder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
+        <rdfs:comment>Placé derrière les attaquants, il crée des occasions de but et relie le milieu à l’attaque.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CenterBack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CenterBack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
+        <rdfs:comment>Défenseur positionné au centre de la défense, juste devant le gardien. Il bloque les attaques par l’axe et marque souvent les attaquants adverses.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CenterForward -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CenterForward">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
+        <rdfs:comment>Similaire à l’avant-centre, mais joue parfois en pivot, dos au but, pour créer des espaces (Attaquant axial).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CentralMidfielder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#CentralMidfielder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
+        <rdfs:comment>Joue au centre du terrain, il participe à la fois à la défense et à l’attaque. Il est souvent le moteur de l’équipe.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Coach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Coach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <rdfs:comment>Défenseurs</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#DefensiveMidfielder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#DefensiveMidfielder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
+        <rdfs:comment>Positionné devant la défense, il récupère les ballons, intercepte les attaques et protège la ligne défensive.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FalseNine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FalseNine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
+        <rdfs:comment>Attaquant qui décroche au milieu pour désorganiser la défense adverse et créer des espaces pour ses coéquipiers (Faux neuf).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <rdfs:comment>Attaquants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FourthOfficial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FourthOfficial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee"/>
+        <rdfs:comment>Gère les remplacements, surveille les bancs, assiste le central.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FullBack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#FullBack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
+        <rdfs:comment>Défenseur positionné sur les côtés (gauche ou droit). Il défend contre les ailiers adverses et soutient parfois l’attaque.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#GoalLineTechnician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#GoalLineTechnician">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee"/>
+        <rdfs:comment>Surveille les lignes de but avec technologie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Goalkeeper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Goalkeeper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <rdfs:comment>Le seul joueur autorisé à utiliser les mains dans la surface de réparation. Son rôle principal est d’empêcher l’équipe adverse de marquer en protégeant les buts.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#MainReferee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#MainReferee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee"/>
+        <rdfs:comment>Arbitre central, prend toutes les décisions majeures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+        <rdfs:comment>Milieux de terrain</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#NationalTeam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#NationalTeam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Player">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Position"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+        <rdfs:comment>Arbitre</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SecondStriker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#SecondStriker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
+        <rdfs:comment>Joue derrière l’avant-centre. Il fait le lien entre le milieu et l’attaque, et participe à la création et à la finition des actions (Deuxième attaquant).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Striker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Striker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Forward"/>
+        <rdfs:comment>Principal buteur de l’équipe. Il joue près du but adverse et est souvent le point de finition des attaques (Buteur).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Sweeper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Sweeper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
+        <rdfs:comment>Défenseur libre jouant derrière la ligne de défense. Il intercepte les ballons dangereux et organise la défense. Rarement utilisé aujourd’hui.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#VideoAssistantReferee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#VideoAssistantReferee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee"/>
+        <rdfs:comment>Arbitre vidéo (VAR), aide à corriger les erreurs via la vidéo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#WingBack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#WingBack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Defender"/>
+        <rdfs:comment>Variante offensive de l’arrière latéral. Il monte souvent pour participer à l’attaque et centrer le ballon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Winger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Winger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Midfielder"/>
+        <rdfs:comment>Joue sur les ailes, utilise sa vitesse et son dribble pour déborder la défense et centrer.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
