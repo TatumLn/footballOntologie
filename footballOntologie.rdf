@@ -149,6 +149,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasVenue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasVenue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#managesTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#managesTeam">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#occursInVenue -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#occursInVenue">
@@ -540,6 +556,19 @@
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Club">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasVenue"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeam"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Sans clubs, pas de championnat.</rdfs:comment>
     </owl:Class>
     
@@ -781,6 +810,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Manager">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#managesTeam"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -792,7 +828,7 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasReferee"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AssistantReferee"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#MainReferee"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -800,6 +836,20 @@
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeam"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasReferee"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#VideoAssistantReferee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasReferee"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#AssistantReferee"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -905,6 +955,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Referee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#officiates"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Match"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Arbitre</rdfs:comment>
     </owl:Class>
     
@@ -1057,6 +1114,19 @@
     <!-- http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueCapacity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#venueName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Lieu / Infrastructure où le match se déroule</rdfs:comment>
     </owl:Class>
     
