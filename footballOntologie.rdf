@@ -7,7 +7,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:untitled-ontology-10="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10">
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"/>
+    </owl:Ontology>
     
 
 
@@ -559,13 +561,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasVenue"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Venue"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#hasTeam"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/linau/ontologies/2025/4/untitled-ontology-10#Team"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Sans clubs, pas de championnat. Entité administrative, organisationnelle (le club dans son ensemble).</rdfs:comment>
